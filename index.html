@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CanSat Mission Ground Control Software</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet"
+
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<header>
+
+<h1>CanSat Mission Ground Control Software</h1>
+
+<div class="buttons">
+
+<button id="startBtn">Start Telemetry</button>
+
+<button id="stopBtn">Stop Telemetry</button>
+
+<button id="exportBtn">Export CSV</button>
+
+<button id="graphBtn">Export Graph</button>
+
+<button id="reportBtn">Mission Report</button>
+
+<button id="syncBtn">Sync PC Time</button>
+
+<button id="resetBtn">Reset Packet</button>
+
+</div>
+
+</header>
+
+<div class="dashboard">
+
+<div class="panel telemetry-panel">
+
+<h2>Telemetry</h2>
+
+<p>Temperature:
+<span id="temp">0</span> °C</p>
+
+<p>Pressure:
+<span id="pressure">0</span> hPa</p>
+
+<p>Altitude:
+<span id="altitude">0</span> m</p>
+
+<p>Battery:
+<span id="battery">0</span> V</p>
+
+<p>
+Packets Received:
+<span id="packetCount">0</span>
+</p>
+
+<p>
+Packets Lost:
+<span id="packetLost">0</span>
+</p>
+
+<p>
+Link Quality:
+<span id="linkQuality">100</span>%
+</p>
+</div>
+
+<div class="panel mission-panel">
+
+    <h2>Mission Controls & Phase</h2>
+
+    <div class="control-buttons">
+
+        <button id="separateBtn">
+            Manual Separation
+        </button>
+
+        <button id="parachuteBtn">
+            Emergency Parachute
+        </button>
+
+        <button id="redundantBtn">
+            Redundant Activation
+        </button>
+
+    </div>
+
+    <div class="mission-status-box">
+
+        <p>
+            <strong>Mission Status:</strong>
+            <span id="status">
+                Waiting...
+            </span>
+        </p>
+
+        <p>
+            <strong>Mission Phase:</strong>
+            <span id="missionPhase">
+                PRE-LAUNCH
+            </span>
+        </p>
+
+    </div>
+
+</div>
+
+<div class="panel health-panel">
+
+<h2>System Health</h2>
+
+<p>GPS:
+<span id="gpsHealth">OK</span></p>
+
+<p>Battery:
+<span id="batteryHealth">OK</span></p>
+
+<p>Telemetry:
+<span id="telemetryHealth">OK</span></p>
+
+<p>Parachute:
+<span id="parachuteHealth">READY</span></p>
+
+<hr>
+
+<h2>Error Code</h2>
+
+<h1 id="errorCode">
+0000
+</h1>
+
+</div>
+
+<div class="panel graph">
+
+<h2>Altitude Graph</h2>
+
+<canvas id="altChart"></canvas>
+
+</div>
+
+<div class="panel graph">
+
+<h2>Temperature Graph</h2>
+
+<canvas id="tempChart"></canvas>
+
+</div>
+<div class="panel">
+
+<h2>GPS Tracking</h2>
+
+<p>
+Latitude:
+<span id="lat">23.0225</span>
+</p>
+
+<p>
+Longitude:
+<span id="lon">72.5714</span>
+</p>
+
+<div id="map"></div>
+
+</div>
+
+<div class="panel orientation-panel">
+
+<h2>Orientation & Timing</h2>
+
+<p>
+System Clock:
+<span id="liveClock">
+00:00:00
+</span>
+</p>
+
+<p>
+Mission Time:
+<span id="missionTime">
+00:00:00
+</span>
+</p>
+
+<hr>
+
+<p>
+Roll:
+<span id="roll">0</span>°
+</p>
+
+<p>
+Pitch:
+<span id="pitch">0</span>°
+</p>
+
+<p>
+Yaw:
+<span id="yaw">0</span>°
+</p>
+
+</div> 
+
+<div class="panel payload-panel">
+
+    <h2>Payload Images</h2>
+
+    <img
+        id="payloadImage"
+        src="images/payload1.jpg"
+        width="100%"
+    >
+
+    <p id="imageCaption">
+        Launch Vehicle Ignition
+    </p>
+
+</div>
+
+
+<div class="panel log-panel">
+
+<h2>Telemetry Log</h2>
+
+<textarea
+id="logArea"
+readonly>
+</textarea>
+
+</div>
+
+</div>
+
+<script src="main.js"></script>
+
+<footer>
+
+Designed by
+Anjali Prajapati
+
+</footer>
+
+</body>
+</html>
+
