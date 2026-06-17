@@ -1,5 +1,9 @@
 # 🚀 CanSat Mission Ground Control Software (GCS)
 
+<p align="center">
+  <img src="screenshots/dashboard.png" width="100%">
+</p>
+
 A web-based Ground Control Software (GCS) dashboard developed for CanSat mission monitoring and telemetry visualization.
 
 This project simulates real-time satellite telemetry acquisition, mission monitoring, GPS tracking, system health analysis, payload imaging, mission phase detection, and telemetry data logging through an interactive aerospace-inspired dashboard.
