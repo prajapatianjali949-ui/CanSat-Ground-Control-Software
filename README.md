@@ -190,9 +190,7 @@ Developed as part of a CanSat Mission Ground Control Software project focusing o
 
 **Anjali Prajapati**
 
-Mobile Application Development Student
-Aerospace & Cybersecurity Enthusiast
-
+Information Technology Engineering Student | Cybersecurity Enthusiast | Secure Systems & Network Security Learner
 ---
 
 ## 📄 License
